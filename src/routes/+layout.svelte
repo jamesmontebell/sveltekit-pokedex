@@ -15,19 +15,23 @@
 </div>
 
 <style>
+	:global(html) {
+		background-color: #0c1815;
+	}
 	* {
 		font-family: lato, sans-serif;
 	}
 	.navbar {
 		display: flex;
 		justify-content: space-between;
-		background-color: antiquewhite;
+		background-color: #4685ff;
 		padding: 10px;
 		border: 1px solid #aaa;
 		margin: 6px;
 		margin-left: 100px;
 		margin-right: 100px;
 		margin-top: 50px;
+		border-radius: 10px;
 	}
 	.navbar a {
 		color: black;
@@ -35,8 +39,7 @@
 		cursor: pointer;
 	}
 	.navbar a.active {
-		border: 1px solid #aaa;
-		border-radius: 4px;
+		color: white;
 	}
 	.navbar a:hover {
 		color: rgba(0, 0, 0, 0.568);

@@ -14,14 +14,15 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="monster">
-	<div on:click={catchMonster}>
-		<div class="monster-content">
-			<img src={monster.image} alt={monster.name} />
-			{monster.name.charAt(0).toUpperCase() + monster.name.slice(1)}
+	<div class="monster-content">
+		<img src={monster.image} alt={monster.name} />
+		<div class="name">{monster.name.charAt(0).toUpperCase() + monster.name.slice(1)}</div>
+		<div on:click={catchMonster}>
+			<button class="catch">Catch</button>
 		</div>
-		<div class="monster-id">
-			{monster.id}
-		</div>
+	</div>
+	<div class="monster-id">
+		{monster.id}
 	</div>
 </div>
 
@@ -30,6 +31,18 @@
 
 	* {
 		font-family: lato, sans-serif;
+	}
+
+	.name {
+		color: white;
+	}
+
+	.catch {
+		background-color: #0c1815;
+		border: 1px solid #aaa;
+		border-radius: 10px;
+		padding: 4px;
+		color: white;
 	}
 
 	.monster-id {
@@ -45,11 +58,18 @@
 		margin: 10px;
 		padding: 10px;
 		position: relative;
-		background-color: #eee;
+		background-color: #0c1815;
+		border-radius: 20px;
+		border: 1px solid #aaa;
 	}
 
 	.monster:hover {
 		background-color: #ddd;
+		transition: ease-in-out 0.2s;
+	}
+
+	.monster:hover .name {
+		color: #0c1815;
 		transition: ease-in-out 0.2s;
 	}
 

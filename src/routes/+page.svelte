@@ -6,6 +6,7 @@
 	import { generations } from './generations';
 	import { goto } from '$app/navigation';
 	import Monster from './Monster.svelte';
+	import { slide } from 'svelte/transition';
 
 	export let data: PageData;
 
@@ -82,12 +83,13 @@
 		margin: 6px;
 		padding: 5px 10px;
 		border: 1px solid #aaa;
-		background-color: antiquewhite;
+		background-color: #4685ff;
 		cursor: pointer;
+		border-radius: 10px;
 	}
 
 	.generation.active {
-		background-color: #ddd;
+		background-color: #eee;
 	}
 
 	.generation:hover {
@@ -108,6 +110,7 @@
 		width: 200px;
 		height: 25px;
 		border: 1px solid #aaa;
+		border-radius: 10px;
 	}
 
 	.search-form {
@@ -121,7 +124,8 @@
 		padding: 5px 10px;
 		border-radius: 5px;
 		border: 1px solid #aaa;
-		background-color: antiquewhite;
+		background-color: #4685ff;
 		margin: 10px;
+		border-radius: 10px;
 	}
 </style>
